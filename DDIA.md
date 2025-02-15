@@ -251,7 +251,26 @@ repeated string interests = 3;
 
 ### Partitioning
 
-- Hash-based and range-based partitioning, rebalancing techniques.
+- if partition is unfair, some partitions have more data/queries than others, called SKEW
+- the presence of skew makes paritioning less effective, with disproportionately high load called HOT SPOTS
+
+#### Partitioning by Key Range
+
+- partitioning DB like encyclopedias, each partition is a range of keys
+  - A-B, C-D, E-F, etc.
+- scans are efficient
+  - can read all keys in a range by reading from a single partition
+- downside is that it can lead to hot spots
+  - if keys are not evenly distributed, some partitions may be more heavily loaded than others
+  - requires rebalancing
+    - moving data from one partition to another
+    - can be expensive
+    - can be done by splitting a partition into two partitions
+
+#### Partitioning by Hash of Key
+
+- where a hash function is applied to each key, and a partition owns a range of hashes. This method destroys the ordering of keys, making range queries inefficient, but may distribute load more evenly
+- it is common to create a fixed number of partitions in advance, to assign several partitions to each node, and to move entire partitions from one node to another when nodes are added or removed. Dynamic partitioning can also be used
 
 ### Transactions
 
