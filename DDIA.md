@@ -274,9 +274,22 @@ repeated string interests = 3;
 
 ### Transactions
 
-- ACID properties, isolation levels, and distributed transactions (2PC, serializability).
+- a way for an application to group several reads/writes together into a logical unit
 
-## Challenges in Distributed Systems
+#### ACID properties
+
+- Atomicity
+  - all or nothing
+- Consistency
+  - only valid data is written
+- Isolation
+  - concurrent transactions are isolated from each other
+  - race conditions can be avoided using serializable isolation but it can be slow
+    - another approach is to use snapshot isolation
+- Durability
+  - once a transaction is committed, it will not be lost
+
+## The Trouble with Distributed Systems
 
 - Fault tolerance and consensus
   - CAP theorem, consistency models, and distributed consensus protocols (Raft, Paxos).
