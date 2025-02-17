@@ -62,11 +62,13 @@
 - can be expressed in a variety of ways
   - JSON, XML, CSV, binary, etc.
   - relational DB
+    - - awkward translation between OOD and relational DB
+      - object-relational mapping (ORM) reduces boilerplate code
     - data organized in relations, tables
     - each relation is unordered collection of tuples, rows
   - graph DB
-    - awkward translation between OOD and relational DB
-      - object-relational mapping (ORM) reduces boilerplate code
+    - data organized in nodes and edges
+    - social networks, recommendation engines, geospatial data, network topologies, ads targeting
   - NoSQL adotption
     - need for greater scalabilityt
     - free / open source software
