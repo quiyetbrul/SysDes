@@ -7,7 +7,7 @@
 
 ## What is a hash table and how does it work?
 
-- it's a data structure that maps keys to values. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found. It is fast at O(1) for inserting, deleting, and searching. For string, the hashing is done by getting the length of the string and modulo it by the size of the hash table. We can use separate chaining if there are collisions, i.e. treat the index is a linked list (this turns O(1) into O(n)).
+- it's a data structure that maps keys to values. It uses a hash function to compute an index into an array of buckets or slots. It is fast at O(1) for inserting, deleting, and searching. For string, the hashing is done by getting the length of the string and modulo it by the size of the hash table. We can use separate chaining if there are collisions, i.e. treat the index is a linked list (this turns O(1) into O(n)).
 
 ## ## Process vs Thread
 
@@ -22,7 +22,7 @@
 ## BFS vs DFS
 
 - BFS uses a queue to explore level by level, which is good for finding shortest path.
-- DFS uses a stack to explore as far as possible along each branch before backtracking. It is good for topological sorting.
+- DFS uses a stack to explore as far as possible along each branch before backtracking. It is good for cycle detection.
 - Both have O(V+E) time complexity, where V is the number of vertices and E is the number of edges.
 
 ## Quick Sort vs Merge Sort
