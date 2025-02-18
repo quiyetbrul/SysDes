@@ -70,7 +70,7 @@ public:
 
 - separate the construction of a complex object from its representation
 - construct an object step by step
-- use case: `StringBuilder` in Java, Protobuf
+- use case: Protobuf
 
 ```cpp
 class Product {
@@ -184,38 +184,43 @@ Foo y = Foo.create();
 
 ### Adapter
 
+- convert the interface of a class into another interface clients expect
+- use case: when you have a class that you can't change but you want to use it in your code
+
 ### Bridge
+
+- decouple an abstraction from its implementation so that the two can vary independently
+- For example, in my Mastermind game, there are different gameplay types
+  - so I have a GameType abstract class and it's implemented by SinglePlayerGame and MultiPlayerGame
 
 ### Composite
 
+- a way to compare objects and treat them the same as tree-like structures
+
 ### Decorator
+
+- creates an interface to be used for adding new features to an object
+- interface Coffee -> class PlainCoffee -> abstract class CoffeeDecorator -> class MilkDecorator
 
 ### Facade
 
+- i see it as adding another layer of abstraction to simplify the interface of a complex system
+- for example, in my mastermind game, i have a class that does all logic for saving, loading, and deleting games but i have another class that just has a method called Save()
+
 ### Flyweight
+
+- a way to reduce memory usage or computational expenses
+- for example, again in my mastermind game, I used nCurses for terminal UI. Instead of creating a new window for each game state, i just used one window and updated it
 
 ### Proxy
 
 ## Behavioral Patterns
 
-### Chain of Responsibility
-
-### Command
-
-### Interpreter
-
-### Iterator
-
-### Mediator
-
-### Memento
-
 ### Observer
 
-### State
+- a way to notify objects of changes, e.g. event listeners, streams, etc.
 
 ### Strategy
 
-### Template Method
-
-### Visitor
+- a way to define a family of algorithms, encapsulate each one, and make them interchangeable
+- in my community data analyzer project, i used this pattern to switch algorithms that analyzes the data to get average property prices and average total livable area per zip code
