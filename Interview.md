@@ -127,3 +127,8 @@ int fib(int n){
 ## What is an event-driven architecture, and when would you use it?
 
 - it is a system that responds to events. It is good for systems that need to be scalable and responsive. For example, a chat system where messages are sent and received in real-time. Another example are online games where players need to be updated in real-time.
+
+## Waterfall vs Agile
+
+- Waterfall is a linear approach and sticks to the plan. It is good for small projects with clear requirements. It is not good for large projects because requirements can change.
+- Agile is an iterative approach and is good for large projects with changing requirements. It is not good for small projects because it can be too complex.
