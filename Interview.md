@@ -9,7 +9,7 @@
 
 - it's a data structure that maps keys to values. It uses a hash function to compute an index into an array of buckets or slots. It is fast at O(1) for inserting, deleting, and searching. For string, the hashing is done by getting the length of the string and modulo it by the size of the hash table. We can use separate chaining if there are collisions, i.e. treat the index is a linked list (this turns O(1) into O(n)).
 
-## ## Process vs Thread
+## Process vs Thread
 
 - Process is an instance of a program that is being executed. It has its own memory space and resources. It is heavyweight.
 - Thread is a lightweight process. It shares the same memory space and resources as the process. It is used for small tasks.
