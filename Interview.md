@@ -119,10 +119,11 @@ int fib(int n){
 
 - I would include distributed cache so that repeating searches don't have to hit the database. I would use Redis because it is fast and can be used as a cache. I would also use a load balancer to distribute the load evenly across the nodes. I would probably also include some eviction policies to remove old data, mainly to manage the cache size.
 
-## Explain the differences between REST APIs and gRPC
+## REST APIs v gRPC v GraphQL
 
-- REST APIs are great for general web services and gRPC is great for microservices that require low-latency. REST APIs use JSON making it slower because it's text-parsing while gRPC is faster because it uses binary serialization.
-- REST uses HTTP methods while gRPC uses protobufs
+- REST APIs uses HTTP methods and are great for general web services. Rest APIs use JSON making it slower because it's text-parsing.
+- gRPC uses protobufs is great for microservices that require low-latency. gRPC is faster because it uses binary serialization.
+- GraphQL is great for querying data because it allows clients to request only the data they need. It is good for mobile apps because it reduces the amount of data sent over the network.
 
 ## What is an event-driven architecture, and when would you use it?
 
