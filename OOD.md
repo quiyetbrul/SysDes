@@ -29,6 +29,7 @@ private:
 ### Factory Method
 
 - define an interface for creating an object, but let subclasses decide which class to instantiate
+- instantiating object of classA through classB
 - use case: logger (to create different types of loggers)
 
 ```cpp
